@@ -21,7 +21,9 @@ import {
   Triangle,
   Lock,
   Cpu,
-  BarChart3
+  BarChart3,
+  Calendar,
+  CheckCircle
 } from 'lucide-react';
 
 import { AnimatedCounter } from '@/components/AnimatedCounter';
@@ -486,36 +488,25 @@ const BoundlessEducation = () => {
               <span className="text-gradient-primary">Boundless:</span> The Universal Solution
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              How Boundless represents the infrastructure breakthrough Web3 has been waiting for
+              The technology that changes everything
             </p>
           </div>
 
+          {/* The Breakthrough Story */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold">The Game-Changing Architecture</h3>
+              <h3 className="text-2xl font-bold">The Breakthrough Story</h3>
               <p className="text-muted-foreground">
-                Boundless emerged from RISC Zero, founded by three visionaries who spent 20+ years 
-                building together. With $54M in funding from tier-1 investors and backed by blockchain's 
-                most respected figures, Boundless represents the infrastructure breakthrough Web3 has been waiting for.
+                While the blockchain world struggled with the impossible trilemma, a team of engineers who had been 
+                building together for over 20 years saw a different path. Boundless emerged from RISC Zero with a 
+                radical proposition: what if we could make zero-knowledge technology as easy to use as writing normal 
+                code, while creating the first universal proving network that works across every blockchain?
               </p>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full" />
-                  <span className="text-sm">Universal blockchain compatibility</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full" />
-                  <span className="text-sm">Proof of Verifiable Work (PoVW)</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full" />
-                  <span className="text-sm">Decentralized proving marketplace</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full" />
-                  <span className="text-sm">Developer experience revolution</span>
-                </div>
-              </div>
+              <p className="text-muted-foreground">
+                Backed by blockchain's most respected figures like Dan Boneh (Stanford cryptography professor) and 
+                Nick White (Celestia COO), Boundless isn't just another blockchain project—it's the infrastructure 
+                foundation that makes Web3's next evolution possible.
+              </p>
             </div>
             <div>
               <img 
@@ -526,99 +517,365 @@ const BoundlessEducation = () => {
             </div>
           </div>
 
-          {/* Key Differentiators */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <Card className="p-6 glass-effect border-primary/20 text-center">
-              <Globe className="w-8 h-8 text-primary mx-auto mb-4" />
-              <h4 className="font-bold mb-2">Universal Compatibility</h4>
-              <p className="text-sm text-muted-foreground">
-                Connect all major blockchains with a single protocol
+          {/* RISC Zero zkVM Revolution */}
+          <Card className="p-8 glass-effect border-primary/20 mb-16">
+            <h3 className="text-2xl font-bold text-center mb-8">The RISC Zero zkVM Revolution</h3>
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div className="space-y-4">
+                <p className="text-muted-foreground">
+                  At the heart of Boundless lies a technological breakthrough that democratizes zero-knowledge 
+                  computing. The RISC Zero zkVM transforms months of cryptographic expertise into hours of simple coding.
+                </p>
+                <p className="text-muted-foreground">
+                  Where other ZK solutions require specialized circuit languages accessible only to cryptography 
+                  experts, Boundless allows any developer to write standard Rust programs and automatically generate 
+                  zero-knowledge proofs.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <ComparisonChart
+                  title="Development Time Comparison"
+                  unit=""
+                  data={[
+                    {
+                      name: "Traditional ZK",
+                      value: 6,
+                      maxValue: 6,
+                      color: "hsl(var(--destructive))",
+                      description: "Months with cryptography experts"
+                    },
+                    {
+                      name: "Boundless zkVM",
+                      value: 1,
+                      maxValue: 6,
+                      color: "hsl(var(--primary))",
+                      description: "Hours with standard Rust"
+                    }
+                  ]}
+                />
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6 mt-8">
+              <div className="text-center p-4 bg-destructive/10 border border-destructive/20 rounded-lg">
+                <h4 className="font-bold text-destructive mb-2">Traditional ZK Development</h4>
+                <p className="text-sm text-muted-foreground">3-6 months with cryptography experts</p>
+                <p className="text-xs text-destructive/80 mt-2">Developer Pool: Hundreds of cryptographers</p>
+              </div>
+              <div className="text-center p-4 bg-primary/10 border border-primary/20 rounded-lg">
+                <h4 className="font-bold text-primary mb-2">Boundless zkVM Development</h4>
+                <p className="text-sm text-muted-foreground">Hours with standard Rust programming</p>
+                <p className="text-xs text-primary/80 mt-2">Developer Pool: Millions of Rust developers</p>
+              </div>
+            </div>
+          </Card>
+
+          {/* Proof of Verifiable Work */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold">Proof of Verifiable Work: Turning Waste into Productivity</h3>
+              <p className="text-muted-foreground">
+                Traditional blockchain networks waste enormous computational power on meaningless calculations. 
+                Bitcoin miners burn electricity solving arbitrary puzzles that serve no purpose beyond network security.
               </p>
-            </Card>
-            <Card className="p-6 glass-effect border-secondary/20 text-center">
-              <Zap className="w-8 h-8 text-secondary mx-auto mb-4" />
-              <h4 className="font-bold mb-2">Proof of Verifiable Work</h4>
-              <p className="text-sm text-muted-foreground">
-                Useful computation instead of wasteful mining
+              <p className="text-muted-foreground">
+                Boundless introduces Proof of Verifiable Work (PoVW), where the same computational power instead 
+                performs useful zero-knowledge computations. Every proof generated serves a real application while 
+                securing the network.
               </p>
-            </Card>
-            <Card className="p-6 glass-effect border-accent/20 text-center">
-              <Network className="w-8 h-8 text-accent mx-auto mb-4" />
-              <h4 className="font-bold mb-2">Proving Marketplace</h4>
-              <p className="text-sm text-muted-foreground">
-                Decentralized network of global provers
-              </p>
-            </Card>
-            <Card className="p-6 glass-effect border-primary/20 text-center">
-              <Cpu className="w-8 h-8 text-primary mx-auto mb-4" />
-              <h4 className="font-bold mb-2">Developer Experience</h4>
-              <p className="text-sm text-muted-foreground">
-                Rust coding instead of cryptographer work
-              </p>
-            </Card>
+            </div>
+            <div>
+              <ComparisonChart
+                title="Computational Purpose Comparison"
+                unit=""
+                data={[
+                  {
+                    name: "Bitcoin Mining",
+                    value: 1,
+                    maxValue: 2,
+                    color: "hsl(var(--destructive))",
+                    description: "Arbitrary hash calculations → Network security only"
+                  },
+                  {
+                    name: "Boundless PoVW",
+                    value: 2,
+                    maxValue: 2,
+                    color: "hsl(var(--primary))",
+                    description: "ZK proof generation → Security + useful computation"
+                  }
+                ]}
+              />
+            </div>
           </div>
 
-          {/* Performance Metrics */}
-          <div className="grid md:grid-cols-4 gap-6 mb-16">
+          {/* Universal Proving Marketplace */}
+          <Card className="p-8 glass-effect border-secondary/20 mb-16">
+            <h3 className="text-2xl font-bold text-center mb-6">The Universal Proving Marketplace</h3>
+            <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+              Boundless creates the first truly decentralized marketplace for zero-knowledge computation. Unlike 
+              traditional blockchains where you're locked into one network, or ZK rollups that force migration to 
+              specific chains, Boundless works universally.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center p-4 bg-secondary/10 border border-secondary/20 rounded-lg">
+                <Globe className="w-8 h-8 text-secondary mx-auto mb-3" />
+                <h4 className="font-bold mb-2">Any Blockchain</h4>
+                <p className="text-sm text-muted-foreground">Request computation from any chain</p>
+              </div>
+              <div className="text-center p-4 bg-secondary/10 border border-secondary/20 rounded-lg">
+                <Network className="w-8 h-8 text-secondary mx-auto mb-3" />
+                <h4 className="font-bold mb-2">Global Provers</h4>
+                <p className="text-sm text-muted-foreground">Thousands compete for best price</p>
+              </div>
+              <div className="text-center p-4 bg-secondary/10 border border-secondary/20 rounded-lg">
+                <Shield className="w-8 h-8 text-secondary mx-auto mb-3" />
+                <h4 className="font-bold mb-2">Mathematical Proofs</h4>
+                <p className="text-sm text-muted-foreground">Ensure correctness without trust</p>
+              </div>
+            </div>
+          </Card>
+
+          {/* How It Actually Works */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold">How It Actually Works</h3>
+              <p className="text-muted-foreground">
+                When you need a zero-knowledge proof, you don't need to understand cryptography or run expensive 
+                hardware. You simply submit your computational request to the Boundless marketplace. A reverse Dutch 
+                auction ensures you get the lowest possible price as global provers compete for your business.
+              </p>
+              <p className="text-muted-foreground">
+                The breakthrough is in the speed and cost efficiency. Traditional ZK proof generation takes hours 
+                and requires specialized hardware. Boundless achieves sub-12 second proofs using standard hardware, 
+                while reducing costs by over 99% for complex computations.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <StatCard
+                icon={Clock}
+                title="Proof Speed"
+                value={12}
+                suffix="s"
+                description="Sub-12 second proofs"
+                trend="up"
+              />
+              <StatCard
+                icon={DollarSign}
+                title="Cost Reduction"
+                value={99}
+                suffix="%"
+                description="For complex computations"
+                trend="up"
+                delay={200}
+              />
+              <StatCard
+                icon={Cpu}
+                title="Hardware"
+                value={0}
+                suffix=""
+                description="Standard equipment only"
+                trend="neutral"
+                delay={400}
+              />
+              <StatCard
+                icon={Target}
+                title="Traditional ZK"
+                value={4}
+                suffix="h"
+                description="Average proof time"
+                trend="down"
+                delay={600}
+              />
+            </div>
+          </div>
+
+          {/* Real-World Impact Today */}
+          <Card className="p-8 glass-effect border-accent/20 mb-16">
+            <h3 className="text-2xl font-bold text-center mb-6">Real-World Impact Today</h3>
+            <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+              This isn't theoretical technology—Boundless is live and transforming how major protocols operate:
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center p-4 bg-accent/10 border border-accent/20 rounded-lg">
+                <h4 className="font-bold text-accent mb-2">EigenLayer</h4>
+                <p className="text-sm text-muted-foreground mb-2">99.9% gas cost reduction for slashing mechanisms</p>
+                <Badge variant="outline" className="text-xs border-accent/30 text-accent">
+                  Live Production
+                </Badge>
+              </div>
+              <div className="text-center p-4 bg-accent/10 border border-accent/20 rounded-lg">
+                <h4 className="font-bold text-accent mb-2">BOB Hybrid Rollup</h4>
+                <p className="text-sm text-muted-foreground mb-2">7 days → 4 hours withdrawal time</p>
+                <Badge variant="outline" className="text-xs border-accent/30 text-accent">
+                  Live Production
+                </Badge>
+              </div>
+              <div className="text-center p-4 bg-accent/10 border border-accent/20 rounded-lg">
+                <h4 className="font-bold text-accent mb-2">Steel Extension</h4>
+                <p className="text-sm text-muted-foreground mb-2">Breaks 30M gas limit constraint on Ethereum</p>
+                <Badge variant="outline" className="text-xs border-accent/30 text-accent">
+                  Live Production
+                </Badge>
+              </div>
+              <div className="text-center p-4 bg-accent/10 border border-accent/20 rounded-lg">
+                <h4 className="font-bold text-accent mb-2">The Signal Project</h4>
+                <p className="text-sm text-muted-foreground mb-2">Cross-chain finality proofs</p>
+                <Badge variant="outline" className="text-xs border-accent/30 text-accent">
+                  In Development
+                </Badge>
+              </div>
+            </div>
+          </Card>
+
+          {/* Developer Experience Revolution */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold">The Developer Experience Revolution</h3>
+              <p className="text-muted-foreground">
+                Boundless transforms ZK development from an expert-only field into accessible technology. Where 
+                building ZK applications previously required cryptography PhDs working for months, Boundless enables 
+                standard developers to build ZK-powered applications in hours.
+              </p>
+              <p className="text-muted-foreground">
+                The Steel framework exemplifies this transformation. Ethereum developers can now write smart contracts 
+                that verify historical blockchain state, aggregate data from multiple blocks, and use on-chain events 
+                as verified inputs—all without learning cryptography or understanding ZK circuits.
+              </p>
+            </div>
+            <div className="p-6 bg-muted/30 rounded-lg border">
+              <h4 className="font-bold mb-4">Before vs After Boundless</h4>
+              <div className="space-y-3 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">Development Time:</span>
+                  <span className="text-destructive">Months → <span className="text-primary">Hours</span></span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">Required Expertise:</span>
+                  <span className="text-destructive">Cryptography PhD → <span className="text-primary">Rust Developer</span></span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">Language:</span>
+                  <span className="text-destructive">Circuit DSLs → <span className="text-primary">Standard Rust</span></span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">Developer Pool:</span>
+                  <span className="text-destructive">Hundreds → <span className="text-primary">Millions</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Universal Cross-Chain Architecture */}
+          <Card className="p-8 glass-effect border-primary/20 mb-16">
+            <h3 className="text-2xl font-bold text-center mb-6">Universal Cross-Chain Architecture</h3>
+            <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+              The most revolutionary aspect of Boundless isn't just making ZK easier—it's making it universal. 
+              Instead of fragmenting the ecosystem across different ZK chains, Boundless enhances every existing 
+              blockchain simultaneously.
+            </p>
+            <ComparisonChart
+              title="Blockchain Compatibility Comparison"
+              unit=""
+              data={[
+                {
+                  name: "zkSync",
+                  value: 1,
+                  maxValue: 5,
+                  color: "hsl(var(--destructive))",
+                  description: "Ethereum only, requires migration"
+                },
+                {
+                  name: "StarkNet",
+                  value: 1,
+                  maxValue: 5,
+                  color: "hsl(var(--destructive))",
+                  description: "Ethereum only, Cairo language"
+                },
+                {
+                  name: "Optimism",
+                  value: 1,
+                  maxValue: 5,
+                  color: "hsl(var(--destructive))",
+                  description: "Ethereum only"
+                },
+                {
+                  name: "Boundless",
+                  value: 5,
+                  maxValue: 5,
+                  color: "hsl(var(--primary))",
+                  description: "All blockchains, no migration needed"
+                }
+              ]}
+            />
+          </Card>
+
+          {/* Live Network Success */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <StatCard
-              icon={Clock}
-              title="Ethereum Proofs"
-              value={12}
-              suffix="s"
-              description="Sub-12 second proof generation"
+              icon={Network}
+              title="Network Status"
+              value={1}
+              suffix=""
+              description="Live on Base blockchain"
               trend="up"
             />
             <StatCard
-              icon={DollarSign}
-              title="Gas Reduction"
-              value={99.9}
-              suffix="%"
-              description="For complex computations"
+              icon={Calendar}
+              title="Launch Date"
+              value={2025}
+              suffix=""
+              description="Mainnet beta launched"
               trend="up"
               delay={200}
-            />
-            <StatCard
-              icon={Target}
-              title="Cost Efficiency"
-              value={30}
-              prefix="$"
-              description="vs $1000+ on-chain"
-              trend="up"
-              delay={400}
             />
             <StatCard
               icon={Users}
               title="Active Provers"
               value={363}
               suffix="+"
-              description="From mainnet beta day one"
+              description="From day one participation"
+              trend="up"
+              delay={400}
+            />
+            <StatCard
+              icon={CheckCircle}
+              title="Production Partners"
+              value={3}
+              suffix="+"
+              description="EigenLayer, BOB, Taiko live"
               trend="up"
               delay={600}
             />
           </div>
 
-          {/* Real-World Applications */}
-          <Card className="p-8 glass-effect border-primary/20">
-            <h3 className="text-2xl font-bold text-center mb-8">Real-World Applications</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <h4 className="font-bold text-primary mb-2">EigenLayer</h4>
-                <p className="text-sm text-muted-foreground">99.9% gas reduction for slashing mechanisms</p>
+          {/* Economic Model That Scales */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold">Economic Model That Scales</h3>
+              <p className="text-muted-foreground">
+                Unlike traditional blockchains where increased demand creates congestion and higher fees, Boundless 
+                scales economically. Proof aggregation means higher volume actually reduces per-proof costs through 
+                shared verification.
+              </p>
+              <p className="text-muted-foreground">
+                This economic model aligns perfectly with mass adoption—the technology becomes more accessible and 
+                affordable as it becomes more popular, creating inevitable momentum toward universal ZK adoption.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <div className="p-4 bg-destructive/10 border border-destructive/20 rounded-lg">
+                <h4 className="font-bold text-destructive mb-2">Traditional Blockchains</h4>
+                <p className="text-sm text-muted-foreground">More demand → Higher fees → Network congestion</p>
               </div>
-              <div className="text-center">
-                <h4 className="font-bold text-secondary mb-2">BOB</h4>
-                <p className="text-sm text-muted-foreground">First hybrid ZK rollup with 4-hour finality</p>
+              <div className="p-4 bg-primary/10 border border-primary/20 rounded-lg">
+                <h4 className="font-bold text-primary mb-2">Boundless</h4>
+                <p className="text-sm text-muted-foreground">More demand → Proof aggregation → Lower per-proof costs</p>
               </div>
-              <div className="text-center">
-                <h4 className="font-bold text-accent mb-2">Steel Extension</h4>
-                <p className="text-sm text-muted-foreground">Execute beyond 30M gas limit on Ethereum</p>
-              </div>
-              <div className="text-center">
-                <h4 className="font-bold text-primary mb-2">Signal Project</h4>
-                <p className="text-sm text-muted-foreground">Prove all blockchains as open utility</p>
+              <div className="p-4 bg-accent/10 border border-accent/20 rounded-lg">
+                <h4 className="font-bold text-accent mb-2">Example Economics</h4>
+                <p className="text-sm text-muted-foreground">Single proof: $30 | 100 aggregated proofs: $50 total ($0.50 each)</p>
               </div>
             </div>
-          </Card>
+          </div>
         </div>
       </section>
 

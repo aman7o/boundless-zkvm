@@ -834,7 +834,7 @@ const BoundlessEducation = () => {
               title="Active Provers"
               value={2000}
               suffix="+"
-              description="From day one participation"
+              description=""
               trend="up"
               delay={400}
             />

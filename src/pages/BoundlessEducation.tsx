@@ -116,11 +116,9 @@ const BoundlessEducation = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-primary/20">
         <div className="container-custom py-4">
           <div className="flex items-center justify-between">
-            <img 
-              src="/src/assets/boundless-logo.svg" 
-              alt="Boundless Logo" 
-              className="h-8 w-auto"
-            />
+            <h1 className="text-xl font-bold text-gradient-primary">
+              ZK & Boundless 
+            </h1>
             <div className="hidden md:flex items-center gap-4">
               {sections.map((section, index) => (
                 <button

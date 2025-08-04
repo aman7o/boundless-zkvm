@@ -116,9 +116,11 @@ const BoundlessEducation = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-primary/20">
         <div className="container-custom py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-xl font-bold text-gradient-primary">
-              Boundless Educational Guide
-            </h1>
+            <img 
+              src="/src/assets/boundless-logo.svg" 
+              alt="Boundless Logo" 
+              className="h-8 w-auto"
+            />
             <div className="hidden md:flex items-center gap-4">
               {sections.map((section, index) => (
                 <button
@@ -175,7 +177,7 @@ const BoundlessEducation = () => {
               Section 1: The Crisis
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              The <span className="text-gradient-primary">$10 Trillion</span> Problem
+              The <span className="text-gradient-primary">Adoption</span> Barrier
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Why blockchain can't scale and what it means for the future of Web3
@@ -830,7 +832,7 @@ const BoundlessEducation = () => {
             <StatCard
               icon={Users}
               title="Active Provers"
-              value={363}
+              value={2000}
               suffix="+"
               description="From day one participation"
               trend="up"
@@ -839,9 +841,9 @@ const BoundlessEducation = () => {
             <StatCard
               icon={CheckCircle}
               title="Production Partners"
-              value={3}
+              value={30}
               suffix="+"
-              description="EigenLayer, BOB, Taiko live"
+              description="Protocols using Boundless live"
               trend="up"
               delay={600}
             />
@@ -917,7 +919,7 @@ const BoundlessEducation = () => {
                   <h4 className="font-bold">Current State</h4>
                   <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• Mainnet beta live</li>
-                    <li>• 363+ active provers</li>
+                    <li>• 2000+ active provers</li>
                     <li>• Real applications deployed</li>
                     <li>• Developer adoption growing</li>
                   </ul>
@@ -1055,6 +1057,13 @@ const BoundlessEducation = () => {
           </div>
         </div>
       </section>
+      
+      {/* Disclaimer */}
+      <div className="text-center py-8 border-t border-white/10">
+        <p className="text-sm text-muted-foreground">
+          This educational website was created by Aman for learning purposes and is not affiliated with Boundless or RISC Zero.
+        </p>
+      </div>
     </div>
   );
 };

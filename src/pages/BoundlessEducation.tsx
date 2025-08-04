@@ -722,7 +722,7 @@ const BoundlessEducation = () => {
                 <h4 className="font-bold text-accent mb-2">The Signal Project</h4>
                 <p className="text-sm text-muted-foreground mb-2">Cross-chain finality proofs</p>
                 <Badge variant="outline" className="text-xs border-accent/30 text-accent">
-                  In Development
+                  Live Production
                 </Badge>
               </div>
             </div>
